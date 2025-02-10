@@ -1,0 +1,34 @@
+A small Node.js program that reads the MQTT server where you have connected OpenwebRX to read the topics OpenwebRX/CLIENT and OpenwebRX/RX 
+and send a message to your Telegram when someone connects with their IP, country, ISP, frequency, and profile. It also notifies you when 
+they disconnect.
+
+For example, when a client connects, you will receive a Telegram notification with details such as:
+
+IP: 78.138.82.254
+
+Country: Spain
+
+City: Ciudad Lineal
+
+ISP: Aire Networks del Mediterraneo
+
+Frequency: (Frequency details from OpenwebRX/RX)
+
+Profile: (Profile details from OpenwebRX/CLIENT)
+
+When the client disconnects, you'll receive another notification indicating the disconnection.
+
+You have a config.js file where you need to put the Telegram token, chatID, and the configuration of your MQTT server.
+
+Info about MQTT in OpenWebRX can be found at this URL https://fms.komkon.org/OWRX/#HOW-MQTT
+
+OpAlo
+
+
+Dependencies:
+
+The standard library modules (console.log, Date, async/await, JSON) are included with Node.js, so we don't need to install them separately.
+
+Third-party libraries (mqtt, axios, node-telegram-bot-api) need to be installed. Here is the command to install these dependencies:
+
+ npm install mqtt axios node-telegram-bot-api
